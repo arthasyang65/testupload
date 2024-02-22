@@ -1,0 +1,102 @@
+Received: from TPEXMBS02.cad.chinalife.com.tw (172.16.18.36) by
+ TPEXMBS01.cad.chinalife.com.tw (172.16.18.35) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256) id
+ 15.1.2507.32 via Mailbox Transport; Fri, 5 Jan 2024 18:07:22 +0800
+Received: from TPEXMBS01.cad.chinalife.com.tw (172.16.18.35) by
+ TPEXMBS02.cad.chinalife.com.tw (172.16.18.36) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256) id
+ 15.1.2507.32; Fri, 5 Jan 2024 18:07:22 +0800
+Received: from FireEyeEX.chinalife.com.tw (192.168.10.50) by
+ TPEXMBS01.cad.chinalife.com.tw (172.16.18.35) with Microsoft SMTP Server id
+ 15.1.2507.32 via Frontend Transport; Fri, 5 Jan 2024 18:07:22 +0800
+Received: by FireEyeEX.chinalife.com.tw (Postfix, from userid 600)
+	id 4T5zWJ6w41z4HLrc; Fri,  5 Jan 2024 18:00:51 +0800 (CST)
+Received: from smtp-gw-1.eranger.com.tw (unknown [192.168.10.9])
+	by FireEyeEX.chinalife.com.tw (Postfix) with ESMTP id 4T5zVR2kGdz4HLrh
+	for <arthas.yang@kgilife.com.tw>; Fri,  5 Jan 2024 18:00:47 +0800 (CST)
+X-AuditID: c0a80a09-c667370000012fcc-58-6597d34be3a9
+Received: from TPMSW03.cad.chinalife.com.tw (tpmsw03.cad.chinalife.com.tw [192.168.10.8])
+	by smtp-gw-1.eranger.com.tw (Symantec Messaging Gateway) with SMTP id AF.2B.12236.B43D7956; Fri,  5 Jan 2024 18:00:43 +0800 (CST)
+Received: from msw.kgilife.com.tw (unverified [192.168.10.71]) by TPMSW03.cad.chinalife.com.tw
+ (Clearswift SMTPRS 5.6.0) with ESMTP id <Tf9e7319394c0a80a081128@TPMSW03.cad.chinalife.com.tw> for <arthas.yang@kgilife.com.tw>;
+ Fri, 5 Jan 2024 18:00:42 +0800
+Received: from sonic307-20.consmr.mail.sg3.yahoo.com (sonic307-20.consmr.mail.sg3.yahoo.com [106.10.241.37])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(No client certificate requested)
+	by msw.kgilife.com.tw (MTA) with ESMTPS id 4T5zVH0lj1z1v9N8
+	for <arthas.yang@kgilife.com.tw>; Fri,  5 Jan 2024 18:00:39 +0800 (CST)
+x-scoring-category: 1 75, 25 25
+X-SONIC-DKIM-SIGN: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048; t=1704448838; bh=PDrEKchMFY8s4xXhRGk1gPtclSWWB4SJlrfFMFDyY9s=; h=X-Sonic-MF:Date:From:To:Subject:From:Subject; b=JZULZiFzlLVV4lSbSTwlazVj1TBtIWWph6emd/sykVnwL3LSywl7flghlxfY+6CwVam07BMaB1rKeGQRlYhsZVDXDWHMQWp8VZ26ZgFZQ7xDpwfUH6WTw5/yPsfe44JJCtFFxzMEe9pb384X1BKyGnFnX5bnIw2rdSa2anWbI3yNc0DeCgupoup+LYcOg+GF6gPAVejJIzX9u4DJRpSYUotHhHqm/bq7le4xnhwWTfKycEvZDdAc7MRkKrZp8KysrXUerJTJX8ZSgQBcE7i9ApW9ErXHP0jSijaXfBK4+uwj9Z9wTHhijfj2cpgyqv9kWdZ0snPJ0PDN5MKgEIvYww==
+X-YMail-OSG: o5cs1QwVM1mkaenATkD0sr8avm1Lgod4mgTEC.x6uPu8lbbNUcouCgRt3JczabF
+ kKBtGjouscF66ZiVOnx.bbGB8XEJQpTvkv7uPC6cxO3N7HFgLsYCoCj0t1kjwESefV4vrBNbyf0V
+ hIxrKsCOTjyleKcMHW3_.ZV1bSc4hbClYl2cNOJ6CEV5RpCOUdkA_7SCr5QA90uA4nBLB1njj_BU
+ vXsaLsqkd2YPYZb5auTH4BUul.GzpsNpmnLh9S_Rx1dcT2I4OPpSgLX7pldl6HB5TiAn9Op9MPQM
+ s51Hh25fc4I9Qj9rRPAJMI7t97W4jbudDFBLCx51DufavDIMz5dVhTaYw8Cmwx1KLIdE1uU.4KM.
+ vpczqQBx7JJUtyNNkiIwi2UOTk993rxFxSuw5nL54X4xJv052R6R3UJEScf_pD4Vl1ulR__9j6L8
+ Fs5dOK1r9EuhY_GKf_TWSCxfb_3supuJ6pbBCP39m6hjYqbHYii1juCyRqVV1WtskAWRz2JAlidO
+ dXrvqskapGbjRmCYiWRn8HikRmAVNQGTzkw9_grYD4kO_uBgTh3ko_J_Ocaa.z6mqhQ7LFfQyW6P
+ LI0h3Y0oVRxejT.MZSUvmVJ14HLSjA3JAfpC7oY.C_TO1HURsPXPwP94z2CvRglYOj63xbgxpi1Y
+ e8FWc9WQAbJ44eAimIM1GOXbo8H3oRZtfQXJGasCqgkFDNUCaA1vd0ymrpQtWkSOwvV9vf3PyHZw
+ q8Vm1wLa3T8VyUu33lxeBnIxKGo_sRUazKJdssK2n4sayHen.I9VPbPQ4Mm9bQMRCBTAtPzHbRqk
+ 7AFadriK_LlpSxNqHmZHMj3PwvLMkPt19GOUzZy5NSrTQnMK0jGFP0J_p5smEjSSBEORLzmpdvgu
+ OnK.Fkm9ixZzcd_zqP4A.LbNP5xVKado72MnzUxcdhrMYCj0PUl.l.x556qrA0Vp5kSN1chm.qSt
+ Kqju5X8YbdPbjipGx0QSmIJoF0SjBL0RL33mi8.eWSjMWrKI0pj4Hc56jHIyEpdNKooPpaHyDYcW
+ hcUXxJmn.MIRwzkbvxh2ulkDVwDmpAimrRx1DxtMsH8xmUvxyns7B.MM2G0RZebJtR3pl_YcSTx8
+ ptnkUKZGVT9EILAwG9TlXvAkuuGh04DP7MftR12vkZOLyk_KfDzUIGSFQeXKPbM6dSLQESPZAx6m
+ 5yPNq5p2UnTaF.aHXHuWCNXY1zpE0T5plKEmF9UpEFf6DtTW1_sRhbUjnsjqr4rnHQa2FwIaGVAb
+ kZeWn6IDdjLAY9TqXD7DUWAo5kFxR4v.RjwT6xE9mnEG6a8fs1XunuC2V8K9UeWw9f4BYyE9PwRg
+ XTqzJUAHfCGOXqJtQfMLA_Bx4B0HjuWGIgD_Q9X6uLF3nVKF4c6gddwUGScQEBEBc8Op8hZy4UR6
+ lc9Gj7Eqmg1zzW2cZoxR4vgBWxpJbRtuLbk5oNfVChR51TKgDrEa4TK22myln4xcSrRdG.SNGiEO
+ 3gwfQih4XNdgUQ95ORW6IhWgYxEjK3lAxn1RgMTVAPzzSxjkVypQA.rr3oxsMJamwHO.GlWCRwJS
+ KYvJ56CrNS8O.jPES9cHeRm8lT35I0UK2wz.9KRutffOYaLEcYlbREMO58GH0ftIqKBFejq1gB_d
+ xSK0bo8GUMWdn9g3XgejxOBGsBzOP94wU5eSBuAahoUuOHQtgER44PqBTcbO_rZ2s_PEWnpBmLFQ
+ Q5VwJvYxRAzCAuH.2xyihQErPF0cvW4aKvuCjjANIE4Xwrm9g81oeSBPwbuWqbEpvaupXxcMUj8U
+ CEVDH3jPpR79CXrjdyJCX2WQpOEj2Kqz0kagIpIS08TsojEeD9TS44nF0u3FeITyFqLBP7tBBot4
+ pISl3EG41agpzoZSkN0txvNqVBhe6XcEDFDs8qyC2eIsihlH5s6D4zhGqI4myscsHwOY_uWLvhda
+ VSlRUNXDauboh2w9LDncD4sBmv.9wc.7blYZ5GbDw_CCufbTkiicrsq_IZjXC7Nn1IUHGFLW0p03
+ yJx.oqVh26MUqPi6CsDBTvhrj7bXl1R0o75WnGKAahx58GQQ00rhVyK.F4lae0BqoJ3_Fy0Qsz3c
+ ttTmRZyWvirQQY1dP1dYLfZQQr4GHrUUX12S7APY6wl639ZfPMgqJXy6mjYnjmZy7._HasOKB5p7
+ PwNyrBNoHomQIaDQvqRaWBm3xdP5LIj3ckyDTNBlr6HbysoMx2E.blnYF2GH20G5JjBeaVFF12aF
+ f.iK4vkCDq53ys9d3q9_MShKqalgVuTwDFmhbYQ--
+X-Sonic-MF: <etlinksp@yahoo.com.tw>
+X-Sonic-ID: 26080030-72b2-4611-a7a1-4d4fbfaeb2b7
+Received: from sonic.gate.mail.ne1.yahoo.com by sonic307.consmr.mail.sg3.yahoo.com with HTTP; Fri, 5 Jan 2024 10:00:38 +0000
+Date: Fri, 5 Jan 2024 09:58:11 +0000
+From: =?UTF-8?B?5p6XIOixkOebmw==?= <etlinksp@yahoo.com.tw>
+To: "arthas.yang@kgilife.com.tw" <arthas.yang@kgilife.com.tw>
+Message-ID: <690056679.4499709.1704448691182@mail.yahoo.com>
+Subject: =?UTF-8?B?5pyD5ZCm6YGy5Lqb5pS25Yiw6YO15Lu2Pz8=?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_Part_4499708_1085420904.1704448691181"
+References: <690056679.4499709.1704448691182.ref@mail.yahoo.com>
+X-Mailer: WebService/1.1.21952 YMailNorrin
+x-msw-jemd-scanning-scores: mailshell=10
+x-msw-original-dkim-signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com.tw; s=s2048; t=1704448838; bh=3xuRuqpmopVsZ9FeXVcz/4DaWWFTgHX5TFtrxoXhQTo=; h=Date:From:To:Subject:References:From:Subject:Reply-To; b=ozb6pY6pJCwzBm0l3Q2HWhjS8T5wyuXlq+YYBl+S31yhrqN9jcND5vp84waOtiQhEsYFH55BlcupzZf0dd6qaDBOgZM4tt7sF0csgg7xY1nDc6PHlOkc+TYUUNpMjQhuKc6uUmFTc7PUrEcAhiBJdd9GeE3s7FrayZH53BulN1YypgxS3K8ZoUMcQ8nRLZUqViPGhd1UIaeftqyd4LlsMJIHg3k8IiU+zdpEUBH7oWbDNDLZV4IAvtE7wsnzf3eJ7VSyFuUd8xW5ew0jAzCFwudoKWSYzeyrqowg4i8YByBZOcwNAiOL0q5Nk328EdmlN8Tj29ODi8gBkYW2pMw8Mg==
+x-msw-jemd-newsletter: false
+x-msw-jemd-refid: [1]10,1,0,,d41d8cd98f00b204,etlinksp@yahoo.com.tw,arthas.yang@kgilife.com.tw,RULES_HIT:41:46:150:152:355:379:541:590:962:967:973:988:989:1189:1221:1274:1313:1314:1345:1381:1516:1517:1518:1526:1535:1539:1569:1575:1588:1589:1594:1676:1711:1714:1730:1748:1777:1792:2525:2527:2559:2566:2682:2685:2827:2859:2933:2937:2939:2942:2945:2947:2951:2954:3022:3138:3139:3140:3141:3142:3876:3877:3934:3936:3938:3941:3944:3947:3950:3953:3956:3959:5007:6114:6261:6642:6653:6674:8603:8957:9025:9038:10004:10400:11639:11658:11783:11889:11984:12043:12297:12519:12534:13139:14181:14659:14721:21080:21444:21451:21627:21666:21980:22250:22372,0,RBL:106.10.241.37:@yahoo.com.tw:arthas.yang@kgilife.com.tw.lbl8.mailshell.net-66.201.201.201 62.16.204.100;04yrdhndiwtc8zr7dssdbbcpd8agzocufkjh5btecirhy5egdmxysircb6ug8pq.cehkq3aic7zbu9d6nh7fh99e11xx5mixi5gd5mnjeun4tmtwks8jdqi1hecuqq6.c-lbl8.mailshell.net-223.238.255.100,CacheIP:n
+x-msw-jemd-refid: [2]one,Bayesian:0.5,0.5,0.5,Netcheck:none,DomainCache:0,MSF:not bulk,SPF:fu,MSBL:0,DNSBL:neutral,Custom_rules:0:0:0,LFtime:231,LUA_SUMMARY:none;dkim:pass;phishing:
+x-msw-jemd-lastmta: 106.10.241.37
+X-MSW-Message-Direction: incoming
+X-Brightmail-Tracker: H4sIAAAAAAAAA+NgFvrIIsWRWlGSWpSXmKPExsVyYAUXh6735empBr/fqVs8WdPO6MDosWX5
+	X+YAxigum5TUnMyy1CJ9uwSujEunpAo28VT8WNTP2MB4jruLkZNDQsBEYtK2KcxdjFwcQgJ3
+	GSUaPj1kh3CamCSmPutghHAeMkksXN3GBtEiJ7F53gxWkISEwAwWia9di6Gc10ISH2+cZ4So
+	UpY4vmg9C4RtIHF71W12EFtIoEbiwo7fYHEWAS2Jp2f/soLYbAJWEsc+nwbrFRGwlbi38gpQ
+	DQcHr4CNxJTXxSCmsIClxKxNKiAVvAKCEidnPgGbwiwQJ7Gq6xgjxHQHia7F/1ghtmpJrJn9
+	jhnCVpfoXtrFDnHmBhaJL3O7mCASMhK3DrewQCRmskscuHULqmoro0T3hBNQzyhKXFs6ixXk
+	ChC7ZUflBEapWUgOmYXkkFlAVcxAC9fPE4IIa0ssW/iaGcJWk7i97So7svgCRrZVjOzFuSUF
+	uunlmxghMcq5g3Hhr796hxiZOBgPMUpwMCuJ8OYunp4qxJuSWFmVWpQfX1Sak1p8iFGag0VJ
+	nHduUG2KkEB6YklqdmpqQWoRTJaJg/MUo6KUOK/NRaBegeKCxNyM0rwSmAJQ8sni+qh6iVFW
+	SpiXkYGBQYgHqDs3swRVXqqBadFsLpvtpbl3Xxzbknmxo/OGGYPbondXD7TfuJxX8l6xLWey
+	8E4JUfPEGOmv7e2bfh9m2PnVY6N/zZtpC7dpL/p8M7aaWfvzh00O0+pd1FeeeZvpM+OY1oS2
+	ibftilfXL3rGOnHP437mj/9dzKtfedicltHYmpdg8mkvm/zX2XYn0mRbogWnnzlpMmeNv8MK
+	gRdfzp3Zzzk98PkxHvYobwez7bcOTlJs9L3QtHMCoy/LwqoA3v69vb8S9hYp17ec2/6HbYXk
+	xu3fThQcS32jsEi3j3X2hLwCjh/22Wxs09fNL837351hLVG2o6L22kPLWQnvnGQ8/069N3Mp
+	n4/fT1NtrkyJtLP7a8pstTNzNimxFGckGmoxFxUnAgDx/EiBhAMAAA==
+Return-Path: etlinksp@yahoo.com.tw
+X-MS-Exchange-Organization-Network-Message-Id: 82bdf162-8136-44d2-4971-08dc0dd61bcb
+X-MS-Exchange-Organization-AVStamp-Mailbox: SYMANTEC;0;0;info
+X-MS-Exchange-Organization-AuthSource: TPEXMBS01.cad.chinalife.com.tw
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:00.2991076
+X-MS-Exchange-Processed-By-BccFoldering: 15.01.2507.032
